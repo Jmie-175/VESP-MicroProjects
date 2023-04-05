@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Group 7</title>
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .w3-bar,h1 {font-family: "Montserrat", sans-serif}
+        </style>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+          <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+          <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+          <a href="page1.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Culture</a>
+          <a href="page2.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Festivals</a>
+          <a href="page3.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
+        </div>
+      
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+          <a href="page1.html" class="w3-bar-item w3-button w3-padding-large">Page 1</a>
+          <a href="page2.html" class="w3-bar-item w3-button w3-padding-large">Page 2</a>
+          <a href="page3.html" class="w3-bar-item w3-button w3-padding-large" style="text-align: right;">About Us</a>
+        </div>
+      </div>
+      
+      <!-- Header -->
+      <header id="header" class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1 class="w3-margin w3-jumbo">Festivals In Indian Culture</h1>
+        <p class="w3-xlarge">"The greatness of a culture can be found in its festivals."</p>
+        <a href="#gtstd"><button class="w3-button w3-hover-white w3-black w3-padding-large w3-large w3-margin-top">Get Started</button></a>
+      </header>
+      
+      <!-- First Grid -->
+      <div id="gtstd" class="w3-white w3-row-padding w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-twothird">
+            <h1>What is Indian Culture ?</h1>
+            <h5 class="w3-padding-32">India is a land of festivals, where people from different religions coexist harmoniously.
+               The wide variety of festivals celebrated in India is a true manifestation of its rich culture and traditions.
+                There are many Indian festivals and celebrations, the most exciting of which are mentioned below.
+                 While the celebrations happen all over the year, October till January is the time when the country can be seen 
+                 at its vibrant best.</h5>
+          </div>
+      
+          <div class="w3-third w3-center">
+            <img src="img1.jpg" alt="img1" style="border-radius: 15px;">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Second Grid -->
+      <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+        <div class="w3-content">
+          <div class="w3-third w3-center">
+            <img src="img3.jpg" alt="img2" height="270px" width="300px" style="border-radius: 15px;">
+          </div>
+      
+          <div class="w3-twothird">
+            <h1>Importance of Festivals in India</h1>
+            <h5 class="w3-padding-32">India is one country where every religion and community celebrates their culture. There are
+              festivals of India state wise, religion-based, and community-wise. So, every day is a new celebration in this country. 
+              You also enjoy lots of Gazetted holidays that gives you an opportunity to plan a trip across the country. Throughout the 
+              whole country in different rregions the same festivals are celebrated in different ways.</h5>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+          <h1 class="w3-margin w3-xlarge">"A nation's culture resides in the hearts and soul of its people."</h1>
+          <h4>- Mahatma Gandhi</h4>
+      </div>
+      
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-center">  
+        <a href="#header"><img src="upbtn.jpg" alt="up button" width="50px" height="50px"></a>
+      </footer>
+      
+      <script>
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
+      
+</body> 
+</html>
