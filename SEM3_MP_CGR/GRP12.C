@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<math.h>
+#include<dos.h>
+#include<conio.h>
+void main()
+{
+int gd=DETECT,gm;
+int x=320,y=240,r=200,i,h,m,s,Amin,Asec;
+struct time t;
+initgraph(&gd,&gm,"C:\\TURBOC3\\BGI");
+circle(x,y,210);
+circle(x,y,230);
+setcolor(4);
+for(i=210;i<229;i++)
+circle(x,y,i+1);
+setcolor(14);
+settextstyle(8,0,2);
+outtextxy(x-10,y-r,"12");
+outtextxy(x-5,y+r-20,"6");
+outtextxy(x-r,y,"9");
+outtextxy(x+r-5,y-10,"3");
+gettime(&t);
+printf("The Current Time is: %2d:%02d:%02d.%02d",t.ti_hour,t.ti_min,t.ti_sec,t.ti_hund);
+while(!kbhit())
+{
+setcolor(15);
+circle(x,y,10);
+setcolor(4);
+for(i=1;i<10;i++)
+circle(x,y,i);
+gettime(&t);
+if(t.ti_min!=m)
+{
+setcolor(0);
+line(x,y,x+(r-70)*cos(Amin*(M_PI/180)),y-(r-70)*sin(Amin*(M_PI/180)));
+line(x,y,x+(r-110)*cos(M_PI/6*h-((m/2)*(M_PI/180))),y-(r-110)*sin(M_PI/6*h-((m/2)*(M_PI/180))));
+}
+if(t.ti_hour>12)
+t.ti_hour=t.ti_hour-12;
+if(t.ti_hour<4)
+h=abs(t.ti_hour-3);
+else
+h=15-t.ti_hour;
+m=t.ti_min;
+if(t.ti_min<=15)
+Amin=(15-t.ti_min)*6;
+else
+Amin=450-t.ti_min*6;
+if(t.ti_sec<=15)
+Asec=(15-t.ti_sec)*6;
+else
+Asec=450-t.ti_sec*6;
+setcolor(14);
+line(x,y,x+(r-70)*cos(Amin*(M_PI/180)),y-(r-70)*sin(Amin*(M_PI/180)));
+line(x,y,x+(r-110)*cos(M_PI/6*h-((m/2)*(M_PI/180))),y-(r-110)*sin(M_PI/6*h-((m/2)*(M_PI/180))));
+setcolor(15);
+line(x,y,x+(r-70)*cos(Asec*(M_PI/180)),y-(r-60)*sin(Asec*(M_PI/180)));
+delay(1000);
+setcolor(0);
+line(x,y,x+(r-70)*cos(Asec*(M_PI/180)),y-(r-60)*sin(Asec*(M_PI/180)));
+}
+clrscr();
+getch();
+}
